@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arraw n-Tlelli — Association culturelle, Agouni-Oucharki, Aghrib</title>
+<meta name="description" content="Association culturelle Arraw n-tlelli — Village Agouni-Oucharki, Commune Aghrib, Tizi-Ouzou, Algérie. Culture, langue, société et histoire amazighes.">
+
+<!-- ===================================================================
+     ESPACE PUBLICITAIRE — Google AdSense
+     Une fois votre site en ligne et approuvé par Google AdSense,
+     collez ici le script de vérification fourni par Google
+     (balise <script> avec votre ca-pub-XXXXXXXXXXXXXXXX).
+     Ne rien ajouter avant d'avoir été approuvé.
+==================================================================== -->
+
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#FAF6EC;       /* ivoire chaud */
+    --paper-2:#F1EADA;     /* contraste léger */
+    --ink:#1C1B17;         /* nuit du Djurdjura */
+    --ink-soft:#5A564C;
+    --blue:#1D6B8C;        /* ciel / bande bleue amazighe */
+    --green:#3E6B3A;       /* bande verte amazighe */
+    --gold:#D9A63E;        /* bande dorée amazighe */
+    --red:#B23226;         /* rouge du Yaz, ⵣ */
+    --line: rgba(28,27,23,0.14);
+    --radius: 3px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.65;
+  }
+  h1,h2,h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    margin:0 0 .4em 0;
+    letter-spacing:-0.01em;
+  }
+  a{color:var(--red); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:.78rem; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--red); font-weight:700; margin-bottom:.7em; display:block;
+  }
+
+  /* ---------- crête de montagne : motif signature (Djurdjura) ---------- */
+  .ridge{ display:block; width:100%; height:auto; }
+  .ridge-divider{ line-height:0; }
+  .ridge-divider svg{ width:100%; height:34px; display:block; }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:30;
+    background:var(--ink);
+    color:var(--paper);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 0;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand img{
+    width:46px; height:46px; border-radius:50%; flex-shrink:0;
+    box-shadow:0 0 0 2px var(--gold);
+  }
+  .brand-text{line-height:1.15;}
+  .brand-text strong{display:block; font-family:'Space Grotesk',sans-serif; font-size:1.02rem; color:var(--paper);}
+  .brand-text span{font-size:.74rem; color:#C9C4B6;}
+  nav ul{list-style:none; display:flex; gap:26px; margin:0; padding:0;}
+  nav a{color:var(--paper); font-weight:600; font-size:.9rem; opacity:.9;}
+  nav a:hover{color:var(--gold); text-decoration:none; opacity:1;}
+
+  /* ---------- hero : bandes du drapeau amazigh + crête ---------- */
+  .hero{
+    position:relative;
+    background:linear-gradient(180deg, var(--blue) 0%, var(--blue) 34%, var(--green) 34%, var(--green) 67%, var(--gold) 67%, var(--gold) 100%);
+    color:#fff;
+    padding:88px 0 0;
+    overflow:hidden;
+  }
+  .hero .wrap{position:relative; z-index:2;}
+  .hero .yaz{
+    position:absolute; right:2%; top:8%;
+    font-size:min(30vw,340px); color:rgba(0,0,0,0.14);
+    font-family:'Space Grotesk',sans-serif; font-weight:700;
+    line-height:1; pointer-events:none; z-index:1;
+  }
+  .hero-inner{padding-bottom:70px;}
+  .hero h1{
+    font-size:clamp(2.3rem, 5vw, 3.6rem);
+    max-width:16ch;
+    text-shadow:0 2px 14px rgba(0,0,0,0.25);
+  }
+  .hero .tagline{
+    font-size:1.12rem; max-width:48ch; margin:0 0 1.5em 0;
+    text-shadow:0 1px 8px rgba(0,0,0,0.25);
+  }
+  .hero .place{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:.92rem; font-weight:700; letter-spacing:.03em;
+    background:rgba(0,0,0,0.28); display:inline-block;
+    padding:7px 14px; border-radius:20px; margin-bottom:1.6em;
+  }
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{
+    display:inline-block; padding:12px 22px; font-weight:700; font-size:.92rem;
+    font-family:'Space Grotesk',sans-serif;
+    border:2px solid #fff; border-radius:var(--radius); color:#fff;
+  }
+  .btn:hover{text-decoration:none; background:#fff; color:var(--ink);}
+  .btn.primary{background:var(--red); border-color:var(--red); color:#fff;}
+  .btn.primary:hover{background:#8f2419; border-color:#8f2419; color:#fff;}
+  .mountains{display:block; width:100%; margin-top:-2px;}
+
+  /* ---------- section shell ---------- */
+  section{padding:64px 0;}
+  section.alt{background:var(--paper-2);}
+  .section-head{max-width:60ch; margin-bottom:2.4em;}
+
+  /* ---------- à propos ---------- */
+  .about-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:48px;}
+  .about-grid p{margin:0 0 1em 0;}
+  .fact-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--line);}
+  .fact-list li{
+    padding:14px 4px; border-bottom:1px solid var(--line);
+    display:flex; justify-content:space-between; gap:16px; font-size:.92rem;
+  }
+  .fact-list b{color:var(--blue); font-family:'Space Grotesk',sans-serif;}
+
+  /* ---------- événements / articles ---------- */
+  .filter-row{display:flex; gap:10px; margin-bottom:28px; flex-wrap:wrap;}
+  .filter-btn{
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.8rem;
+    letter-spacing:.04em; text-transform:uppercase;
+    padding:8px 16px; border:1px solid var(--ink); background:transparent;
+    color:var(--ink); border-radius:20px; cursor:pointer;
+  }
+  .filter-btn.active{background:var(--ink); color:var(--paper);}
+
+  .card-grid{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr));
+    gap:24px;
+  }
+  .card{
+    background:var(--paper); border:1px solid var(--line);
+    border-left:5px solid var(--blue);
+    display:flex; flex-direction:column;
+  }
+  .card.type-evenement{border-left-color:var(--red);}
+  .card-body{padding:20px; display:flex; flex-direction:column; gap:8px; flex:1;}
+  .card .tag{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--red);
+  }
+  .card.type-article .tag{color:var(--blue);}
+  .card h3{font-size:1.12rem; margin:0; font-family:'Space Grotesk',sans-serif;}
+  .card .date{font-size:.8rem; color:var(--ink-soft);}
+  .card p.excerpt{font-size:.92rem; color:var(--ink-soft); margin:0; flex:1;}
+  .card .read{font-size:.85rem; font-weight:700; margin-top:6px; font-family:'Space Grotesk',sans-serif;}
+
+  /* ---------- pub / soutien ---------- */
+  .ad-slot{
+    border:2px dashed var(--line); padding:40px 20px; text-align:center;
+    color:var(--ink-soft); font-size:.9rem; background:var(--paper-2);
+  }
+
+  /* ---------- contact ---------- */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .social-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px;}
+  .social-list a{
+    display:flex; align-items:center; gap:12px; font-weight:700; color:var(--ink);
+    padding:12px 16px; border:1px solid var(--line); background:var(--paper);
+  }
+  .social-list a:hover{border-color:var(--red); color:var(--red); text-decoration:none;}
+  .dot{width:9px; height:9px; background:var(--red); border-radius:50%; flex-shrink:0;}
+
+  footer{
+    padding:34px 0; text-align:center; font-size:.82rem; color:var(--ink-soft);
+    background:var(--ink); color:#C9C4B6;
+  }
+  footer a{color:var(--gold);}
+
+  @media (max-width:760px){
+    .about-grid, .contact-grid{grid-template-columns:1fr;}
+    nav ul{gap:16px;}
+    .brand-text span{display:none;}
+  }
+  @media (max-width:560px){
+    nav ul{display:none;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-inner">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Logo de l'association Arraw n-Tlelli">
+      <div class="brand-text">
+        <strong>Arraw n-Tlelli</strong>
+        <span>Agouni-Oucharki · Aghrib · Tizi-Ouzou</span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#actualites">Événements &amp; articles</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://www.facebook.com/associationarrawntlelli/" target="_blank" rel="noopener">Facebook ↗</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="yaz">ⵣ</span>
+  <div class="wrap hero-inner">
+    <span class="eyebrow" style="color:#fff">Association culturelle</span>
+    <h1>Arraw n-Tlelli</h1>
+    <p class="tagline">« Les enfants de la liberté » — culture, langue, société et histoire amazighes, au cœur du village d'Agouni-Oucharki. Théâtre, poésie, fêtes traditionnelles et solidarité.</p>
+    <p class="place">Village Agouni-Oucharki · Commune d'Aghrib · Tizi-Ouzou, Algérie</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#actualites">Voir les événements</a>
+      <a class="btn" href="https://www.facebook.com/associationarrawntlelli/" target="_blank" rel="noopener">Nous suivre sur Facebook</a>
+    </div>
+  </div>
+  <!-- crête du Djurdjura -->
+  <svg class="mountains" viewBox="0 0 1200 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <polygon fill="var(--paper)" points="0,90 0,55 80,30 150,50 230,15 300,45 370,20 450,48 520,10 600,42 670,18 760,50 830,25 910,55 980,20 1060,48 1140,15 1200,40 1200,90"/>
+  </svg>
+</section>
+
+<section id="apropos">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">Qui sommes-nous</span>
+      <h2>Une association villageoise, tournée vers la culture amazighe</h2>
+      <p>L'association culturelle Arraw n-Tlelli (Tiddukla Tadelsant Arraw n-Tlelli) est basée au village d'Agouni-Oucharki, dans la commune d'Aghrib (wilaya de Tizi-Ouzou). Elle œuvre autour de quatre axes : la <strong>culture</strong>, la <strong>langue</strong>, la <strong>société</strong> et l'<strong>histoire</strong> amazighes.</p>
+      <p>Depuis sa création, l'association organise et participe à des activités culturelles et sociales : célébration de Yennayer (le nouvel an amazigh), hommages au Printemps berbère, soirées de poésie kabyle, représentations d'une troupe théâtrale locale, et actions de solidarité envers les habitants du village.</p>
+      <p>Le nom de l'association, <em>« Arraw n Tlelli »</em>, signifie « les enfants de la liberté » — un nom porté en hommage aux luttes pour la reconnaissance de l'identité et de la langue amazighes.</p>
+    </div>
+    <div>
+      <ul class="fact-list">
+        <li><span>Village</span> <b>Agouni-Oucharki</b></li>
+        <li><span>Commune</span> <b>Aghrib</b></li>
+        <li><span>Wilaya</span> <b>Tizi-Ouzou (15)</b></li>
+        <li><span>Pays</span> <b>Algérie</b></li>
+        <li><span>Domaines</span> <b>Culture · Langue · Société · Histoire</b></li>
+        <li><span>Activités</span> <b>Théâtre, poésie, fêtes, solidarité</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="ridge-divider">
+  <svg viewBox="0 0 1200 34" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <polygon fill="var(--ink)" points="0,34 0,20 60,8 120,22 190,4 260,18 330,6 400,20 470,2 540,16 610,6 690,20 760,4 830,18 900,6 970,20 1040,4 1110,18 1200,8 1200,34"/>
+  </svg>
+</div>
+
+<section id="actualites" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Actualités</span>
+      <h2>Événements &amp; articles</h2>
+      <p>Retrouvez ici les prochains événements de l'association ainsi que des articles publiés au fil du temps.</p>
+    </div>
+
+    <div class="filter-row" id="filterRow">
+      <button class="filter-btn active" data-filter="all">Tout</button>
+      <button class="filter-btn" data-filter="evenement">Événements</button>
+      <button class="filter-btn" data-filter="article">Articles</button>
+    </div>
+
+    <div class="card-grid" id="cardGrid"><!-- généré par script.js --></div>
+  </div>
+</section>
+
+<section id="pub">
+  <div class="wrap">
+    <span class="eyebrow">Espace partenaire</span>
+    <div class="ad-slot" id="ad-slot">
+      Emplacement réservé aux annonces Google AdSense.<br>
+      Sera activé une fois le site en ligne et approuvé par Google.
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Contact</span>
+      <h2>Restons en lien</h2>
+      <p>Pour toute question, proposition d'événement ou envie de rejoindre l'association, contactez-nous ou suivez-nous sur les réseaux.</p>
+    </div>
+    <ul class="social-list">
+      <li><a href="https://www.facebook.com/associationarrawntlelli/" target="_blank" rel="noopener"><span class="dot"></span> Page Facebook officielle</a></li>
+      <li><a href="https://www.facebook.com/groups/associationarrawntlelli/" target="_blank" rel="noopener"><span class="dot"></span> Groupe Facebook</a></li>
+      <li><a href="https://www.youtube.com/channel/UC87YIWNuSNZHWbIeZLo6AlQ" target="_blank" rel="noopener"><span class="dot"></span> Chaîne YouTube</a></li>
+      <li><a href="mailto:contact@arrawntlelli.dz"><span class="dot"></span> contact@arrawntlelli.dz (à remplacer par votre e-mail réel)</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Association culturelle Arraw n-Tlelli · Agouni-Oucharki, Aghrib, Tizi-Ouzou · Site créé avec Claude
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
